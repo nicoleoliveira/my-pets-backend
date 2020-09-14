@@ -3,7 +3,7 @@ export interface Pet {
     name: string,
     species: string,
     birthdate: string,
-    isDeleted: boolean,
+    isDeleted?: boolean,
     createdDate?: string,
     updatedDate?: string,
     removedDate?: string

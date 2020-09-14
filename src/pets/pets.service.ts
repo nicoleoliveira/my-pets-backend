@@ -21,6 +21,7 @@ export class PetsService {
 
     createPet(newPet: Pet) {
         newPet.createdDate = new Date().toISOString();
+        newPet.updatedDate = new Date().toISOString();
         newPet.id = this.pets.length + 1;
         this.pets.push(newPet);
 
