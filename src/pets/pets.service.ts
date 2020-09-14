@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { pets } from './db/pets.database';
+import { pets } from '../db/pets.database';
 import { Pet } from './pet.interface';
 
 @Injectable()

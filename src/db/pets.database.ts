@@ -1,4 +1,4 @@
-import { Pet } from  '../pet.interface';
+import { Pet } from  '../pets/pet.interface';
 
 export const pets: Array<Pet> = [
   {
@@ -9,6 +9,7 @@ export const pets: Array<Pet> = [
     isDeleted: false,
     createdDate: new Date().toISOString(),
     updatedDate: new Date().toISOString(),
+    description: 'Gata tricolor, um pouco arisca. '
   },
   {
     id: 2,
@@ -18,5 +19,6 @@ export const pets: Array<Pet> = [
     isDeleted: false,
     createdDate: new Date().toISOString(),
     updatedDate: new Date().toISOString(),
+    description: 'Gata totalmente branco, manso. Importante cuidados com a pele'
   }
 ]

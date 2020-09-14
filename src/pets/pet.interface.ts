@@ -1,10 +1,8 @@
-export interface Pet {
-    id?: number,
+import { SchemaSync } from "src/interfaces/schema-sync.interface";
+
+export interface Pet extends SchemaSync {
     name: string,
     species: string,
     birthdate: string,
-    isDeleted?: boolean,
-    createdDate?: string,
-    updatedDate?: string,
-    removedDate?: string
+    description?: string
 }
