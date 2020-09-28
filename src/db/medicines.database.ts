@@ -2,6 +2,7 @@ import { Medicines } from "src/medicines/medicines";
 
 export const medicines: Array<Medicines> = [
     {
+        id: 1,
         petId: 1,
         name: 'Vermifugo',
         dosage: '1 comprimido a cada 8 horas',
