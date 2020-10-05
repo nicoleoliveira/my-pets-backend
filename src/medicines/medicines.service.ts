@@ -2,17 +2,22 @@ import { Injectable } from '@nestjs/common';
 
 import { Medicines } from './medicines';
 import { medicines } from 'src/db/medicines.database';
+import { pets } from 'src/db/pets.database';
 
 @Injectable()
 export class MedicinesService {
     medicines = medicines;
 
     getMedicines() {
-        return this.medicines;
+        return this.medicines.map(medicine => {
+            const pet = pets.find(pet => pet.id === medicine.petId);
+            delete medicine.petId;
+            return { ...medicine, pet: { id: pet.id, name: pet.name } }
+        });
     }
 
     getMedicine(id: number) {
-        return this.medicines.find(pet => pet.id === id);
+        return this.medicines.find(medicine => medicine.id === id);
     }
 
     diffMedicines(syncDate: string) {
